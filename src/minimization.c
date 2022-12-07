@@ -523,6 +523,7 @@ void Minimization(int run)
 
 
   EvaluateDerivatives(NumberOfCoordinatesMinimizationVariables,&energy,NULL,Hessian,&StrainFirstDerivative,FALSE,FALSE);
+  fprintf(stderr, "xq modified, EvaluateDerivatives \n");
 
   fprintf(OutputFilePtr[CurrentSystem],"Minimization initial volume: %18.10f [A^3]\n",Volume[CurrentSystem]);
   fprintf(OutputFilePtr[CurrentSystem],"Minimization initial energy: %18.10f [K]\n",energy*ENERGY_TO_KELVIN);

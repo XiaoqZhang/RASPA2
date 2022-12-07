@@ -2206,6 +2206,7 @@ void ComputeFrameworkAdsorbateVDWHessian(REAL *Energy,REAL* Gradient,REAL_MATRIX
 
                     // add contribution to the energy
                     *Energy+=energy;
+                    fprintf(stderr, "xq modified, %i and %i have VDW energy %f \n", typeA, typeB, energy);
 
                     //if((index_i<0)&&(index_j<0)&&(index_j2<0)) continue;
 
@@ -2381,6 +2382,7 @@ void ComputeFrameworkAdsorbateChargeChargeHessian(REAL *Energy,REAL* Gradient,RE
                     PotentialSecondDerivativeCoulombic(ChargeA,ChargeB,rr,&U,&f1,&f2);
 
                     *Energy+=U;
+                    fprintf(stderr, "xq modified, %f and %f have charge energy %f \n", ChargeA, ChargeB, U);
 
                     StrainDerivative->ax+=f1*dr.x*dr.x;
                     StrainDerivative->bx+=f1*dr.x*dr.y;
