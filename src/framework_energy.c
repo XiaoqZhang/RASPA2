@@ -2690,12 +2690,22 @@ int CalculateFrameworkIntraBondDipoleBondDipoleEnergy(void)
 
 int CalculateFrameworkAdsorbateVDWEnergy(void)
 {
-  int i,j,k,l,f1;
+  int i,j,k,l,f1,xq_c;
   int typeA,typeB,type;
   REAL rr,scalingA,energy;
   VECTOR posA,posB,dr;
   VECTOR s;
   int icell0,icell;
+  double xq_energy[Framework[CurrentSystem].NumberOfAtoms[0]];
+
+  // Initialize energy for each atom
+  for(f1=0;f1<Framework[CurrentSystem].NumberOfFrameworks;f1++)
+  {
+    for(xq_c=0;xq_c<Framework[CurrentSystem].NumberOfAtoms[f1];xq_c++)
+    {
+      xq_energy[xq_c]=0.0;
+    }
+  }
 
   UHostAdsorbateVDW[CurrentSystem]=0.0;
   for(i=0;i<NumberOfAdsorbateMolecules[CurrentSystem];i++)
@@ -2783,6 +2793,7 @@ int CalculateFrameworkAdsorbateVDWEnergy(void)
                 energy=PotentialValue(typeA,typeB,rr,scalingA);;
                 if(energy>=EnergyOverlapCriteria) return OVERLAP=TRUE;
                 UHostAdsorbateVDW[CurrentSystem]+=energy;
+                xq_energy[k] += energy;
               }
             }
           }
@@ -2790,6 +2801,15 @@ int CalculateFrameworkAdsorbateVDWEnergy(void)
       }
     }
   }
+
+  for(f1=0;f1<Framework[CurrentSystem].NumberOfFrameworks;f1++)
+  {
+    for(xq_c=0;xq_c<Framework[CurrentSystem].NumberOfAtoms[f1];xq_c++)
+    {
+      fprintf(stdout, "CO2 and framework atom %i VDW energy: %f\n", xq_c, xq_energy[xq_c]);
+    }
+  }
+  fprintf(stdout, "UHostAdsorbateVDW: %f\n", UHostAdsorbateVDW[CurrentSystem]);
   return 0;
 }
 
@@ -2900,12 +2920,22 @@ int CalculateFrameworkCationVDWEnergy(void)
 
 int CalculateFrameworkAdsorbateChargeChargeEnergy(void)
 {
-  int i,j,k;
+  int i,j,k, f1, xq_c;
   int typeA,typeB,type;
   REAL r,rr;
   REAL chargeA,chargeB;
   VECTOR posA,posB,dr;
   REAL scalingA;
+  double xq_ewald[Framework[CurrentSystem].NumberOfAtoms[0]];
+
+  // Initialize energy for each atom
+  for(f1=0;f1<Framework[CurrentSystem].NumberOfFrameworks;f1++)
+  {
+    for(xq_c=0;xq_c<Framework[CurrentSystem].NumberOfAtoms[f1];xq_c++)
+    {
+      xq_ewald[xq_c]=0.0;
+    }
+  }
 
   UHostAdsorbateChargeChargeReal[CurrentSystem]=0.0;
   if(ChargeMethod==NONE) return 0;
@@ -2945,12 +2975,21 @@ int CalculateFrameworkAdsorbateChargeChargeEnergy(void)
               chargeB=Framework[CurrentSystem].Atoms[CurrentFramework][k].Charge;
 
               UHostAdsorbateChargeChargeReal[CurrentSystem]+=PotentialValueCoulombic(chargeA,chargeB,r);
+              xq_ewald[k]+=PotentialValueCoulombic(chargeA,chargeB,r);
             }
           }
         }
       }
     }
   }
+  for(f1=0;f1<Framework[CurrentSystem].NumberOfFrameworks;f1++)
+  {
+    for(xq_c=0;xq_c<Framework[CurrentSystem].NumberOfAtoms[f1];xq_c++)
+    {
+      fprintf(stdout, "CO2 and framework atom %i Ewald energy: %f\n", xq_c, xq_ewald[xq_c]);
+    }
+  }
+  fprintf(stdout, "UHostAdsorbateChargeChargeReal: %f\n", UHostAdsorbateChargeChargeReal[CurrentSystem]);
   return 0;
 }
 
@@ -5127,7 +5166,6 @@ int CalculateFrameworkAdsorbateVDWEnergyDifference(int m,int comp,int New,int Ol
       }
     }
   }
-
   return 0;
 }
 
@@ -5398,7 +5436,6 @@ int CalculateFrameworkCationVDWEnergyDifference(int m,int comp,int New,int Old,i
       }
     }
   }
-
   return 0;
 }
 

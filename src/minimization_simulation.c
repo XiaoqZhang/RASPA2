@@ -85,6 +85,7 @@ void MinimalizationSimulation(void)
   InitializeMCMovesStatisticsAllSystems();
 
   CalculateTotalEnergyAllSystems();
+  fprintf(stdout, "Pre-simulation finished, xq modified\n");
 
   PrintPreSimulationStatus();
 
@@ -92,6 +93,7 @@ void MinimalizationSimulation(void)
   {
     for(k=0;k<NumberOfCycles;k++)
     {
+      fprintf(stdout, "Minimization step %d, xq modified\n", k);
       InitializesEnergiesAllSystems();
       InitializesEnergyAveragesAllSystems();
       CalculateTotalEnergyAllSystems();
@@ -191,9 +193,10 @@ void MinimalizationSimulation(void)
 
       // do the minimization
       Minimization(k);
-
+      fprintf(stdout, "Minimization finished, xq modified\n");
       InitializesEnergiesCurrentSystem();
       CalculateEnergy();
+      fprintf(stdout, "Calculate current system energy, xq modified\n");
       PrintEnergyStatus(OutputFilePtr[CurrentSystem],"minimization full energy");
     }
 

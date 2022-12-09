@@ -43,6 +43,7 @@
 
 #include "simulation.h"
 #include "run.h"
+#include <valgrind/callgrind.h>
 
 int main(int argc, char **argv)
 {
@@ -103,7 +104,11 @@ int main(int argc, char **argv)
         break;
     }
   }
+  CALLGRIND_START_INSTRUMENTATION;
+  CALLGRIND_TOGGLE_COLLECT;
   output = run(input, input_crystal, raspa_dir, stream);
+  CALLGRIND_TOGGLE_COLLECT;
+  CALLGRIND_STOP_INSTRUMENTATION;
 
   // This prints the output, which can be piped into other applications.
   if (stream)
