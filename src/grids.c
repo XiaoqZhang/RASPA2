@@ -327,7 +327,7 @@ void MakeASCIGrid(void)
   NumberOfAdsorbateMolecules[CurrentSystem]=0;
   NumberOfCationMolecules[CurrentSystem]=0;
 
-  CalculateForce();
+  CalculateForce(); // xq: the function here?
   TailEnergy=UTailCorrection[CurrentSystem];
 
   save=ChargeMethod;
@@ -389,7 +389,7 @@ void MakeASCIGrid(void)
     sprintf(buffer,"ASCI_Grids/asci_grid_%s.grid",PseudoAtoms[GridTypeList[l]].Name);
     FilePtr=fopen(buffer,"w");
 
-    typeA=GridTypeList[l];
+    typeA=GridTypeList[l];  // xq: need to check the definition of GridTypeList
     for(i=0;i<=NumberOfVDWGridPoints.x;i++)
     {
       teller=teller+1.0;
@@ -409,6 +409,9 @@ void MakeASCIGrid(void)
               // apply boundary condition
               //value=CalculateFrameworkVDWEnergyAtPosition(pos,typeA);
               CalculateDerivativesAtPositionVDW(pos,typeA,&value,&first_derivative,&second_derivative,&third_derivative);
+              // xq: this is where the interaction is calculated, the energy is the variable value
+              // xq: why there is only one atom/cation type? Answer: type B is defined in the function
+              // xq: There is no function for charge-charge interaction calculation in MaskASCIGrid
               break;
           }
 
