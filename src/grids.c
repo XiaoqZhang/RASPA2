@@ -363,6 +363,8 @@ void MakeASCIGrid(void)
   NumberOfVDWGridPoints.y=(int)(SizeGrid.y/SpacingVDWGrid);
   NumberOfVDWGridPoints.z=(int)(SizeGrid.z/SpacingVDWGrid);
 
+  // xq: difference 2, the number of grid points has to be odd in MakeGrid
+
   DeltaVDWGrid.x=SizeGrid.x/(REAL)NumberOfVDWGridPoints.x;
   DeltaVDWGrid.y=SizeGrid.y/(REAL)NumberOfVDWGridPoints.y;
   DeltaVDWGrid.z=SizeGrid.z/(REAL)NumberOfVDWGridPoints.z;
@@ -411,7 +413,7 @@ void MakeASCIGrid(void)
               CalculateDerivativesAtPositionVDW(pos,typeA,&value,&first_derivative,&second_derivative,&third_derivative);
               // xq: this is where the interaction is calculated, the energy is the variable value
               // xq: why there is only one atom/cation type? Answer: type B is defined in the function
-              // xq: There is no function for charge-charge interaction calculation in MaskASCIGrid
+              // xq: There is no function for charge-charge interaction calculation in MakeASCIGrid
               break;
           }
 
@@ -567,6 +569,15 @@ void MakeGrid(void)
             second_derivative.az=second_derivative.bz=second_derivative.cz=0.0;
             third_derivative=0.0;
           }
+
+          fprintf(stdout, "%f\t", value);
+          fprintf(stdout, "%f\t", first_derivative.x*DeltaVDWGrid.x);
+          fprintf(stdout, "%f\t", first_derivative.y*DeltaVDWGrid.y);
+          fprintf(stdout, "%f\t", first_derivative.z*DeltaVDWGrid.z);
+          fprintf(stdout, "%f\t", second_derivative.ay*(DeltaVDWGrid.x*DeltaVDWGrid.y));
+          fprintf(stdout, "%f\t", second_derivative.az*(DeltaVDWGrid.x*DeltaVDWGrid.z));
+          fprintf(stdout, "%f\t", second_derivative.bz*(DeltaVDWGrid.y*DeltaVDWGrid.z));
+          fprintf(stdout, "%f\n", third_derivative*(DeltaVDWGrid.x*DeltaVDWGrid.y*DeltaVDWGrid.z));
 
           // store energy, and derivatives in "unit cube format"
           VDWGrid[GridTypeList[l]][i][j][k][0]=(float)value;

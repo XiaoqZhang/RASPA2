@@ -1,27 +1,24 @@
 Compiler and run-time data
 ===========================================================================
-RASPA 2.0.45
+RASPA 2.0.47
 Compiled as a 64-bits application
-Compiler: gcc Apple LLVM 12.0.5 (clang-1205.0.22.9)
-Compile Date = May 18 2021, Compile Time = 12:54:12
+Compiler: gcc 11.3.0
+Compile Date = Dec 13 2022, Compile Time = 10:11:27
 
-Tue May 18 15:38:56 2021
-Simulation started on Tuesday, May 18.
-The start time was 03:38 PM.
+Tue Dec 13 10:14:51 2022
+Simulation started on Tuesday, December 13.
+The start time was 10:14 AM.
 
-Cpu data:    x86_64
-Cpu Model:   MacPro7,1
-Host name:   MacPro.local
-OS release:  20.4.0
-OS type:     Darwin
-OS version:  20E232
-
+Hostname:    lsmob101683
+OS type:     Linux on x86_64
+OS release:  5.15.0-56-generic
+OS version:  #62-Ubuntu SMP Tue Nov 22 19:54:14 UTC 2022
 
 Simulation
 ===========================================================================
 Dimensions: 3
-Random number seed: 1621345135
-RASPA directory set to: /Users/dubbelda/RASPA/simulations/
+Random number seed: 1670922891
+RASPA directory set to: /home/xiaoqi/RASPA/simulations
 String appended to output-files: 
 Number of cycles: 0
 Number of initializing cycles: 0
@@ -335,6 +332,7 @@ The force field and all the interactions:
     Zn1 -      He [LENNARD_JONES] p_0/k_B:   2.13963 [K], p_1: 2.67000 [A], shift/k_B:  -0.00103831 [K], tailcorrection: no
     Zn1 -   C_co2 [LENNARD_JONES] p_0/k_B:   3.54568 [K], p_1: 2.72250 [A], shift/k_B:  -0.00193384 [K], tailcorrection: no
     Zn1 -   O_co2 [LENNARD_JONES] p_0/k_B:   5.99848 [K], p_1: 2.85850 [A], shift/k_B:  -0.00438292 [K], tailcorrection: no
+    Zn1 -    O_o2 [LENNARD_JONES] p_0/k_B:   4.71907 [K], p_1: 2.87250 [A], shift/k_B:  -0.00355065 [K], tailcorrection: no
     Zn1 -   O_com [ZERO_POTENTIAL]
     Zn1 -    N_n2 [LENNARD_JONES] p_0/k_B:   4.01063 [K], p_1: 3.00300 [A], shift/k_B:  -0.00393922 [K], tailcorrection: no
     Zn1 -   N_com [ZERO_POTENTIAL]
@@ -353,6 +351,7 @@ The force field and all the interactions:
      O1 -      He [LENNARD_JONES] p_0/k_B:  87.34987 [K], p_1: 2.81000 [A], shift/k_B:  -0.05759716 [K], tailcorrection: no
      O1 -   C_co2 [LENNARD_JONES] p_0/k_B: 144.75186 [K], p_1: 2.86250 [A], shift/k_B:  -0.10665706 [K], tailcorrection: no
      O1 -   O_co2 [LENNARD_JONES] p_0/k_B: 244.88712 [K], p_1: 2.99850 [A], shift/k_B:  -0.23837299 [K], tailcorrection: no
+     O1 -    O_o2 [LENNARD_JONES] p_0/k_B: 192.65539 [K], p_1: 3.01250 [A], shift/k_B:  -0.19284452 [K], tailcorrection: no
      O1 -   O_com [ZERO_POTENTIAL]
      O1 -    N_n2 [LENNARD_JONES] p_0/k_B: 163.73332 [K], p_1: 3.14300 [A], shift/k_B:  -0.21136625 [K], tailcorrection: no
      O1 -   N_com [ZERO_POTENTIAL]
@@ -370,6 +369,7 @@ The force field and all the interactions:
      O2 -      He [LENNARD_JONES] p_0/k_B:  27.72093 [K], p_1: 2.87500 [A], shift/k_B:  -0.02096647 [K], tailcorrection: no
      O2 -   C_co2 [LENNARD_JONES] p_0/k_B:  45.93775 [K], p_1: 2.92750 [A], shift/k_B:  -0.03872862 [K], tailcorrection: no
      O2 -   O_co2 [LENNARD_JONES] p_0/k_B:  77.71619 [K], p_1: 3.06350 [A], shift/k_B:  -0.08603419 [K], tailcorrection: no
+     O2 -    O_o2 [LENNARD_JONES] p_0/k_B:  61.14018 [K], p_1: 3.07750 [A], shift/k_B:  -0.06956071 [K], tailcorrection: no
      O2 -   O_com [ZERO_POTENTIAL]
      O2 -    N_n2 [LENNARD_JONES] p_0/k_B:  51.96161 [K], p_1: 3.20800 [A], shift/k_B:  -0.07584077 [K], tailcorrection: no
      O2 -   N_com [ZERO_POTENTIAL]
@@ -386,6 +386,7 @@ The force field and all the interactions:
      C1 -      He [LENNARD_JONES] p_0/k_B:  22.63405 [K], p_1: 3.19000 [A], shift/k_B:  -0.03193931 [K], tailcorrection: no
      C1 -   C_co2 [LENNARD_JONES] p_0/k_B:  37.50801 [K], p_1: 3.24250 [A], shift/k_B:  -0.05837238 [K], tailcorrection: no
      C1 -   O_co2 [LENNARD_JONES] p_0/k_B:  63.45500 [K], p_1: 3.37850 [A], shift/k_B:  -0.12634718 [K], tailcorrection: no
+     C1 -    O_o2 [LENNARD_JONES] p_0/k_B:  49.92075 [K], p_1: 3.39250 [A], shift/k_B:  -0.10189455 [K], tailcorrection: no
      C1 -   O_com [ZERO_POTENTIAL]
      C1 -    N_n2 [LENNARD_JONES] p_0/k_B:  42.42648 [K], p_1: 3.52300 [A], shift/k_B:  -0.10859434 [K], tailcorrection: no
      C1 -   N_com [ZERO_POTENTIAL]
@@ -401,6 +402,7 @@ The force field and all the interactions:
      C2 -      He [LENNARD_JONES] p_0/k_B:  22.84018 [K], p_1: 3.05500 [A], shift/k_B:  -0.02486687 [K], tailcorrection: no
      C2 -   C_co2 [LENNARD_JONES] p_0/k_B:  37.84962 [K], p_1: 3.10750 [A], shift/k_B:  -0.04564254 [K], tailcorrection: no
      C2 -   O_co2 [LENNARD_JONES] p_0/k_B:  64.03291 [K], p_1: 3.24350 [A], shift/k_B:  -0.09983661 [K], tailcorrection: no
+     C2 -    O_o2 [LENNARD_JONES] p_0/k_B:  50.37540 [K], p_1: 3.25750 [A], shift/k_B:  -0.08059790 [K], tailcorrection: no
      C2 -   O_com [ZERO_POTENTIAL]
      C2 -    N_n2 [LENNARD_JONES] p_0/k_B:  42.81288 [K], p_1: 3.38800 [A], shift/k_B:  -0.08669365 [K], tailcorrection: no
      C2 -   N_com [ZERO_POTENTIAL]
@@ -415,6 +417,7 @@ The force field and all the interactions:
      C3 -      He [LENNARD_JONES] p_0/k_B:  22.84018 [K], p_1: 3.05500 [A], shift/k_B:  -0.02486687 [K], tailcorrection: no
      C3 -   C_co2 [LENNARD_JONES] p_0/k_B:  37.84962 [K], p_1: 3.10750 [A], shift/k_B:  -0.04564254 [K], tailcorrection: no
      C3 -   O_co2 [LENNARD_JONES] p_0/k_B:  64.03291 [K], p_1: 3.24350 [A], shift/k_B:  -0.09983661 [K], tailcorrection: no
+     C3 -    O_o2 [LENNARD_JONES] p_0/k_B:  50.37540 [K], p_1: 3.25750 [A], shift/k_B:  -0.08059790 [K], tailcorrection: no
      C3 -   O_com [ZERO_POTENTIAL]
      C3 -    N_n2 [LENNARD_JONES] p_0/k_B:  42.81288 [K], p_1: 3.38800 [A], shift/k_B:  -0.08669365 [K], tailcorrection: no
      C3 -   N_com [ZERO_POTENTIAL]
@@ -428,6 +431,7 @@ The force field and all the interactions:
      H1 -      He [LENNARD_JONES] p_0/k_B:   9.13154 [K], p_1: 2.74500 [A], shift/k_B:  -0.00523249 [K], tailcorrection: no
      H1 -   C_co2 [LENNARD_JONES] p_0/k_B:  15.13233 [K], p_1: 2.79750 [A], shift/k_B:  -0.00971470 [K], tailcorrection: no
      H1 -   O_co2 [LENNARD_JONES] p_0/k_B:  25.60045 [K], p_1: 2.93350 [A], shift/k_B:  -0.02184963 [K], tailcorrection: no
+     H1 -    O_o2 [LENNARD_JONES] p_0/k_B:  20.14016 [K], p_1: 2.94750 [A], shift/k_B:  -0.01768735 [K], tailcorrection: no
      H1 -   O_com [ZERO_POTENTIAL]
      H1 -    N_n2 [LENNARD_JONES] p_0/k_B:  17.11665 [K], p_1: 3.07800 [A], shift/k_B:  -0.01949303 [K], tailcorrection: no
      H1 -   N_com [ZERO_POTENTIAL]
@@ -440,6 +444,7 @@ The force field and all the interactions:
      He -      He [LENNARD_JONES] p_0/k_B:  10.90000 [K], p_1: 2.64000 [A], shift/k_B:  -0.00494280 [K], tailcorrection: no
      He -   C_co2 [LENNARD_JONES] p_0/k_B:  18.06294 [K], p_1: 2.69250 [A], shift/k_B:  -0.00921806 [K], tailcorrection: no
      He -   O_co2 [LENNARD_JONES] p_0/k_B:  30.55837 [K], p_1: 2.82850 [A], shift/k_B:  -0.02095875 [K], tailcorrection: no
+     He -    O_o2 [LENNARD_JONES] p_0/k_B:  24.04061 [K], p_1: 2.84250 [A], shift/k_B:  -0.01698416 [K], tailcorrection: no
      He -   O_com [ZERO_POTENTIAL]
      He -    N_n2 [LENNARD_JONES] p_0/k_B:  20.43155 [K], p_1: 2.97300 [A], shift/k_B:  -0.01889482 [K], tailcorrection: no
      He -   N_com [ZERO_POTENTIAL]
@@ -451,6 +456,7 @@ The force field and all the interactions:
      He -       C [LENNARD_JONES] p_0/k_B:   2.95296 [K], p_1: 4.51000 [A], shift/k_B:  -0.03319436 [K], tailcorrection: no
   C_co2 -   C_co2 [LENNARD_JONES] p_0/k_B:  29.93300 [K], p_1: 2.74500 [A], shift/k_B:  -0.01715199 [K], tailcorrection: no
   C_co2 -   O_co2 [LENNARD_JONES] p_0/k_B:  50.63981 [K], p_1: 2.88100 [A], shift/k_B:  -0.03878296 [K], tailcorrection: no
+  C_co2 -    O_o2 [LENNARD_JONES] p_0/k_B:  39.83889 [K], p_1: 2.89500 [A], shift/k_B:  -0.03141127 [K], tailcorrection: no
   C_co2 -   O_com [ZERO_POTENTIAL]
   C_co2 -    N_n2 [LENNARD_JONES] p_0/k_B:  33.85815 [K], p_1: 3.02550 [A], shift/k_B:  -0.03477820 [K], tailcorrection: no
   C_co2 -   N_com [ZERO_POTENTIAL]
@@ -461,6 +467,7 @@ The force field and all the interactions:
   C_co2 -      CH [LENNARD_JONES] p_0/k_B:  22.55795 [K], p_1: 3.70750 [A], shift/k_B:  -0.07841175 [K], tailcorrection: no
   C_co2 -       C [LENNARD_JONES] p_0/k_B:   4.89351 [K], p_1: 4.56250 [A], shift/k_B:  -0.05895165 [K], tailcorrection: no
   O_co2 -   O_co2 [LENNARD_JONES] p_0/k_B:  85.67100 [K], p_1: 3.01700 [A], shift/k_B:  -0.08652638 [K], tailcorrection: no
+  O_co2 -    O_o2 [LENNARD_JONES] p_0/k_B:  67.39832 [K], p_1: 3.03100 [A], shift/k_B:  -0.06998813 [K], tailcorrection: no
   O_co2 -   O_com [ZERO_POTENTIAL]
   O_co2 -    N_n2 [LENNARD_JONES] p_0/k_B:  57.28026 [K], p_1: 3.16150 [A], shift/k_B:  -0.07659340 [K], tailcorrection: no
   O_co2 -   N_com [ZERO_POTENTIAL]
@@ -470,8 +477,16 @@ The force field and all the interactions:
   O_co2 -     CH2 [LENNARD_JONES] p_0/k_B:  69.26454 [K], p_1: 3.48850 [A], shift/k_B:  -0.16712968 [K], tailcorrection: no
   O_co2 -      CH [LENNARD_JONES] p_0/k_B:  38.16290 [K], p_1: 3.84350 [A], shift/k_B:  -0.16462890 [K], tailcorrection: no
   O_co2 -       C [LENNARD_JONES] p_0/k_B:   8.27870 [K], p_1: 4.69850 [A], shift/k_B:  -0.11888367 [K], tailcorrection: no
+   O_o2 -    O_o2 [LENNARD_JONES] p_0/k_B:  53.02300 [K], p_1: 3.04500 [A], shift/k_B:  -0.05660368 [K], tailcorrection: no
    O_o2 -   O_com [ZERO_POTENTIAL]
+   O_o2 -    N_n2 [LENNARD_JONES] p_0/k_B:  45.06301 [K], p_1: 3.17550 [A], shift/k_B:  -0.06187515 [K], tailcorrection: no
    O_o2 -   N_com [ZERO_POTENTIAL]
+   O_o2 -      Ar [LENNARD_JONES] p_0/k_B:  81.10834 [K], p_1: 3.21250 [A], shift/k_B:  -0.11938149 [K], tailcorrection: no
+   O_o2 -     CH4 [LENNARD_JONES] p_0/k_B:  91.67413 [K], p_1: 3.38250 [A], shift/k_B:  -0.18383502 [K], tailcorrection: no
+   O_o2 -     CH3 [LENNARD_JONES] p_0/k_B:  75.67354 [K], p_1: 3.40250 [A], shift/k_B:  -0.15720980 [K], tailcorrection: no
+   O_o2 -     CH2 [LENNARD_JONES] p_0/k_B:  54.49117 [K], p_1: 3.50250 [A], shift/k_B:  -0.13467871 [K], tailcorrection: no
+   O_o2 -      CH [LENNARD_JONES] p_0/k_B:  30.02317 [K], p_1: 3.85750 [A], shift/k_B:  -0.13236868 [K], tailcorrection: no
+   O_o2 -       C [LENNARD_JONES] p_0/k_B:   6.51294 [K], p_1: 4.71250 [A], shift/k_B:  -0.09520548 [K], tailcorrection: no
   O_com -   O_com [ZERO_POTENTIAL]
   O_com -    N_n2 [ZERO_POTENTIAL]
   O_com -   N_com [ZERO_POTENTIAL]
@@ -2590,7 +2605,7 @@ Average adsorption energy <U_gh>_1-<U_h>_0 obtained from Widom-insertion:
 Simulation finished,  0 warnings
 
 
-Tue May 18 15:52:13 2021
-Simulation finished on Tuesday, May 18.
-The end time was 03:52 PM.
+Tue Dec 13 10:37:09 2022
+Simulation finished on Tuesday, December 13.
+The end time was 10:37 AM.
 
